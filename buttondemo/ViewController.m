@@ -1,10 +1,4 @@
 //
-//  ViewController.m
-//  buttondemo
-//
-//  Created by senao.mis on 2014/8/6.
-//  Copyright (c) 2014年 senao.mis. All rights reserved.
-//
 
 #import "ViewController.h"
 
@@ -13,6 +7,20 @@
 @end
 
 @implementation ViewController
+@synthesize male, female;
+
+-(IBAction)tap:(id)sender {
+    UIButton* b = (UIButton*)sender;
+    if (b == male) {
+        female.selected = YES;
+        male.selected = NO;
+    }
+    if (b==female) {
+        female.selected = NO;
+        male.selected = YES;
+    }
+    
+}
 
 - (void)viewDidLoad
 {
